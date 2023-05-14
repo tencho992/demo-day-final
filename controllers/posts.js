@@ -111,15 +111,17 @@ createComments: async (req, res) => {
   },
   addPoints: async (req, res) => {
     try {
-      await Users.findOneAndUpdate(
-        { user: req.user._id },
-        {
-          $inc: { points: 50 },
-        }
-      );
+      req.user.points += 50
+      req.user.save()
+      // await Users.findOneAndUpdate(
+      //   { user: req.user._id },
+      //   {
+      //     $inc: { points: 50 },
+      //   }
+      // );
       console.log("Points +50");
-      res.reload();
-      //res.redirect('back')
+      res.redirect('back');
+      
     } catch (err) {
       console.log(err);
     }

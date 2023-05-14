@@ -15,7 +15,7 @@ router.put("/likePost/:id", postsController.likePost);
 
 router.delete("/deletePost/:id", postsController.deletePost);
 
-router.put("/addPoints", postsController.addPoints);
+router.get("/points/add", postsController.addPoints);
 
 
 module.exports = router;
