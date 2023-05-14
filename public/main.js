@@ -1,26 +1,31 @@
-var addPoints = document.getElementById("addPoints");
-var thumbDown = document.getElementsByClassName("fa-thumbs-down");
-const userComment = document.getElementById('submit')
-var trash = document.getElementsByClassName("fa-trash");
 
-addPoints.addEventListener('click', function(){  
-        fetch('users', {
-          method: 'put',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({
-            'points': points,
-            'userName': userName,
-            '_id': _id, 
-          })
-        })
-        .then(response => {
-          if (response.ok) return response.json()
-        })
-        .then(data => {
-          console.log(data)
-          window.location.reload(true)
-        })
-      });
+function addPoints(){
+  fetch('/post/points/add')
+    window.location.href='/profile'
+  
+}
+
+
+// addPoints.addEventListener('click', function(){  
+//         fetch('post/points/add', {
+//           method: 'put',
+//           headers: {'Content-Type': 'application/json'},
+//           body: JSON.stringify({
+//             'points': points,
+//             'userName': userName,
+//             '_id': _id, 
+//           })
+//         })
+//         .then(response => {
+//           if (response.ok) return response.json()
+//         })
+//         .then(data => {
+//           console.log(data)
+//           window.location.reload(true)
+//         })
+//       });
+
+
 Array.from(thumbDown).forEach(function(element) {
   element.addEventListener('click', function(){
     const name = this.parentNode.parentNode.childNodes[1].innerText

@@ -113,14 +113,9 @@ createComments: async (req, res) => {
     try {
       req.user.points += 50
       req.user.save()
-      // await Users.findOneAndUpdate(
-      //   { user: req.user._id },
-      //   {
-      //     $inc: { points: 50 },
-      //   }
-      // );
+     
       console.log("Points +50");
-      res.redirect('back');
+      res.redirect('/profile');
       
     } catch (err) {
       console.log(err);

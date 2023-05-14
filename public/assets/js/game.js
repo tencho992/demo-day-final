@@ -20,6 +20,7 @@ function flipCard() {
 
   secondCard = this;
   checkForMatch();
+  gameOver()
 }
 
 function checkForMatch() {
@@ -59,6 +60,22 @@ function resetBoard() {
 })();
 function reset(){
   location.reload()
+}
+
+//variable cards check all individually to check if theyre flipped 
+//classlist = flipped
+function gameOver(){
+  console.log(cards)
+  let isDone= true
+  cards.forEach(card => {
+    if(!card.classList.contains('flip')){
+      isDone = false
+    }
+  })
+ if(isDone){
+  document.getElementById("addPoints").disabled = false;
+  console.log('gamecompleted')
+ }
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
