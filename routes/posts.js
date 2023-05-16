@@ -17,5 +17,7 @@ router.delete("/deletePost/:id", postsController.deletePost);
 
 router.get("/points/add", postsController.addPoints);
 
+router.get("/points/addQuiz", postsController.addQuizPoints);
+
 
 module.exports = router;

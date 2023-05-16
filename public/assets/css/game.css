@@ -1,73 +1,89 @@
-#gameBody{
-    padding-top:80px !important;
-    word-wrap:break-word  !important;
-  } 
-  #img{
-    height: 200px !important;
-  }
-  .footer__link{
-    text-align: right  !important;
-  }
+
+#gameBody {
+  padding-top: 80px;
+  word-wrap: break-word;
+  margin: 0 auto;
+  margin-top: 100px;
   
-  #gameReset{
-    margin: 0 0 0 0 !important;
-  }
-  .gameReset{
-    height: 30px !important;
-    /* margin-left: 500px; */
-  }
-  .memory-game{
-    margin: 0 0 0 0 !important;
-  }
-  #gameBody {
-    height: 100vh !important;
-    display: flex !important;
-    /* background: url('../images/marvelbackground.png'); */
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-  }
-  
-  .memory-game {
-    width: 640px !important;
-    height: 640px !important;
-    margin: auto !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    perspective: 1000px !important;
-    margin-left: 475px !important;
-  }
-  
-  .memory-card {
-    width: calc(25% - 10px) !important;
-    height: calc(33.333% - 10px) !important;
-    margin: 5px !important;
-    position: relative !important;
-    transform: scale(1) !important;
-    transform-style: preserve-3d !important;
-    transition: transform .5s !important;
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3) !important;
-  }
-  
-  .memory-card:active {
-    transform: scale(0.97) !important;
-    transition: transform .2s !important;
-  }
-  
-  .memory-card.flip {
-    transform: rotateY(180deg) !important;
-  }
-  
-  .front-face,
-  .back-face {
-    width: 100% !important;
-    height: 100% !important;
-    padding: 20px !important;
-    position: absolute !important;
-    border-radius: 5px !important;
-    background: #d9d9dc6b !important;
-    backface-visibility: hidden !important;
-  }
-  
-  .front-face {
-    transform: rotateY(180deg) !important;
-  }
+}
+
+#img {
+  height: 200px;
+}
+
+.footer__link {
+  text-align: right;
+}
+
+#gameReset {
+  margin: 0;
+}
+
+.gameReset {
+  height: 30px;
+  /* margin-left: 500px; */
+}
+
+.memory-game {
+  margin: 0;
+}
+
+#gameBody {
+  height: 100vh;
+  display: flex;
+  /* background: url('../images/marvelbackground.png'); */
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin: 0 auto; /* Center horizontally */
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #d9d9dc6b;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+#centerButtons{
+  display: flex;
+  justify-content: center;
+}
+#addPoints{
+  margin-left: 10px;
+}

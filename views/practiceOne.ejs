@@ -1,12 +1,11 @@
-<%- include('partials/headerGame2') -%>
-<section class="page__title-area pt-120 pb-90">
+<%- include('partials/headerGame') -%>
+<section class="page__title-area pt-120 pb-90" style="background-image: url('assets/img/course/bg.png');">
 
 <div class="container">
 
 <div id="gameBody">  
    
         
-      <a href="/practiceOne" class="e-btn" id="resetGame">Reset Game</a>
         
     <section class="memory-game">
         <div class="memory-card" data-framework="aurelia">
@@ -67,9 +66,11 @@
       </section>
  
       </div>
+      <div id="centerButtons">
+        <a href="/practiceOne" class="e-btn" id="resetGame">Reset Game</a>
       
-        <button onclick="addPoints()" name="submit" class="e-btn" id="addPoints">Submit</button>
-      
+        <button onclick="addPoints()" disabled name="submit" class="e-btn" id="addPoints">Submit</button>
+      </div>
  </div>
  </section>
  <script src="assets/js/game.js"></script>

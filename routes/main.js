@@ -27,5 +27,7 @@ router.get("/courseList", homeController.getCourseList); ///same html for profil
 router.get("/courseDetails", homeController.getCourseDetails);
 router.get("/practiceOne", homeController.getPracticeOne); //Prior wishlist.ejs
 router.get("/quizOne", homeController.getQuizOne);
+router.get("/completeGame", homeController.getCompleteGame); //Prior wishlist.ejs
+router.get("/completeQuiz", homeController.getCompleteQuiz); //Prior wishlist.ejs
 
 module.exports = router;

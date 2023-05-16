@@ -8616,4 +8616,22 @@ p.checkout-coupon input[type=text]:focus {
   color: #2b4eff;
 }
 
+#homemade{
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+}
+#homemadeTwo{
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+}
+#special{
+  color: white;
+}
+#quizContainer{
+  margin-top: 200px;
+  margin-bottom: 250px;
+  margin-left: 400px;
+}
 /*# sourceMappingURL=style.css.map */

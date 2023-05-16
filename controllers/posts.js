@@ -23,7 +23,8 @@ module.exports = {
   },
   getJournalEntries: async (req, res) => {
     try {
-      const posts = await Post.find({ user: req.user.id });
+      const posts = await Post.find().sort({createdAt:'desc'});
+      console.log(posts)
       res.render("journalEntries.ejs", { posts: posts, user: req.user });
     } catch (err) {
       console.log(err);
@@ -52,16 +53,13 @@ module.exports = {
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
 
-      await Post.create({
-        title: req.body.title,
+      const post = await Post.create({
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        caption: req.body.caption,
-        likes: 0,
-        user: req.user.id,
       });
+      console.log(post)
       console.log("Post has been added!");
-      res.redirect("/profile");
+      res.redirect("/journalEntries");
     } catch (err) {
       console.log(err);
     }
@@ -115,7 +113,19 @@ createComments: async (req, res) => {
       req.user.save()
      
       console.log("Points +50");
-      res.redirect('/profile');
+      res.redirect('/completeGame');
+      
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  addQuizPoints: async (req, res) => {
+    try {
+      req.user.points += 100
+      req.user.save()
+     
+      console.log("Points +100");
+      res.redirect('/completeQuiz');
       
     } catch (err) {
       console.log(err);

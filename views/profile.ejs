@@ -3,18 +3,18 @@
  
 
     <!-- page title area start -->
-    <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/page-title/page-title.jpg">
+    <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="assets/img/page-title/tibetlandscape.jpeg">
        <div class="container">
           <div class="row">
              <div class="col-xxl-12">
                 <div class="page__title-wrapper mt-110">
-                   <h5 class="page__title">Welcome, <%= user.userName%></h5>                         
+                   <h5 class="page__title">Welcome, <%= user.userName%></h5>
+                   <br><h5 class="page__title" >Points: <%= user.points%></h5>                         
                    <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                          <li class="breadcrumb-item"><a href="/accountInfo">Account Info</a></li>
-                         <li class="breadcrumb-item"><a href="/journalEntries">Journal Entries</a></li>
-                         <li class="breadcrumb-item"><a href="/courseDetails">Courses</a></li>
-                   
+                         <li class="breadcrumb-item"><a href="/journalEntries">Losar Photos</a></li>
+                         
                       </ol>
                    </nav>
                 </div>
@@ -23,47 +23,165 @@
        </div>
     </section>
     <!-- page title area end -->
-
-
-<div class="container">
-  <div class="row mt-5">
-      <div class="col-6">
-          
-          <div class="mt-5">
-            <h2>Add a post</h2>
-            <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                  <label for="title" class="form-label">Title</label>
-                  <input type="text" class="form-control" id="title" name="title">
-              </div>
-              <div class="mb-3">
-                <label for="caption" class="form-label">Caption</label>
-                <textarea class="form-control" id="caption" name="caption"></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
-            </form>
-          </div>
+    <!-- COURSE LIST START -->
+    <section class="course__area pt-120 pb-120">
+      <div class="container">
+         <div class="row">
+            <div class="col-xxl-12">
+               <div class="course__tab-conent">
+                  <div class="tab-content" id="courseTabContent">
+                     
+                     <div class="tab-pane fade show active" id="list" role="tabpanel" aria-labelledby="list-tab">
+                        <div class="row">
+                           <div class="col-xxl-12">
+                              <div class="course__item white-bg mb-30 fix">
+                                 <div class="row gx-0">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                       <div class="course__thumb course__thumb-list w-img p-relative fix">
+                                          <a href="/courseDetails">
+                                             <img src="assets/img/course/list/course-1.jpg" alt="">
+                                          </a>
+                                          <div class="course__tag">
+                                             <a href="/courseDetails">Fundatmentals</a>
+                                          </div>
+                                       </div>
+                                    </div>        
+                                    <div class="col-xxl-8 col-xl-8 col-lg-8">
+                                       <div class="course__right">
+                                          <div class="course__content course__content-3">
+                                             <div class="course__meta d-flex align-items-center">
+                                                <div class="course__lesson mr-20">
+                                                   <span><i class="far fa-book-alt"></i>1 out of 3 Lessons</span>
+                                                </div>
+                                             </div>
+                                             <h3 class="course__title course__title-3">
+                                                <a href="/courseDetails">Learn the fundamentals</a>
+                                             </h3>
+                                             <div class="course__summary">
+                                               <p>Learn the fundamentals of the Tibetan Language by studying the alphabet. Strengthen your knowledge with fun videos and games. Materials for off-line studying included as well as a final test to unlock the next level!</p>
+                                             </div>
+                                          </div>
+                                          <div class="course__more course__more-2 d-flex justify-content-between align-items-center">
+                                             <div class="course__status">
+                                                <span>Free</span>
+                                             </div>
+                                             <div class="course__btn">
+                                                <a href="/courseDetails" class="link-btn">
+                                                   START NOW
+                                                   <i class="far fa-arrow-right"></i>
+                                                   <i class="far fa-arrow-right"></i>
+                                                </a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>                                                           
+                           <div class="col-xxl-12">
+                              <div class="course__item white-bg mb-30 fix">
+                                 <div class="row gx-0">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                       <div class="course__thumb course__thumb-list w-img p-relative fix">
+                                          <a href="/login">
+                                             <img src="assets/img/course/list/course-2.jpg" alt="">
+                                          </a>
+                                          <div class="course__tag">
+                                             <a href="/login" class="sky-blue">Words</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xxl-8 col-xl-8 col-lg-8">
+                                       <div class="course__right">
+                                          <div class="course__content course__content-3">
+                                             <div class="course__meta d-flex align-items-center">
+                                                <div class="course__lesson mr-20">
+                                                   <span><i class="far fa-book-alt"></i>2 out of 3 Lessons</span>
+                                                </div>
+                                               
+                                             </div>
+                                             <h3 class="course__title course__title-3">
+                                                <a href="/login">Basic Tibetan words</a>
+                                             </h3>
+                                             <div class="course__summary">
+                                               <p>Learn the small words that make big impact! In this course we will be learning the basics of communication, words like: Mother, Dog, They, Yes, No etc. </p>    
+                                            </div>
+                                             
+                                          </div>
+                                          <div class="course__more course__more-2 d-flex justify-content-between align-items-center">
+                                             <div class="course__status d-flex align-items-center">
+                                                <span class="sky-blue">Free</span>
+                                                <span class="old-price">$30.00</span>
+                                             </div>
+                                             <div class="course__btn">
+                                                <a href="/courseDetails" class="link-btn">
+                                                   Unlock after Lesson 1
+                                                   <i class="far fa-arrow-right"></i>
+                                                   <i class="far fa-arrow-right"></i>
+                                                </a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>                                                           
+                           <div class="col-xxl-12">
+                              <div class="course__item white-bg mb-30 fix">
+                                 <div class="row gx-0">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4">
+                                       <div class="course__thumb course__thumb-list w-img p-relative fix">
+                                          <a href="/login">
+                                             <img src="assets/img/course/list/course-3.jpg" alt="">
+                                          </a>
+                                          <div class="course__tag">
+                                             <a href="#" class="blue-2">Sentences</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col-xxl-8 col-xl-8 col-lg-8">
+                                       <div class="course__right">
+                                          <div class="course__content course__content-3">
+                                             <div class="course__meta d-flex align-items-center">
+                                                <div class="course__lesson mr-20">
+                                                   <span><i class="far fa-book-alt"></i>3 out of 3 Lessons</span>
+                                                </div>
+                                             </div>
+                                             <h3 class="course__title course__title-3">
+                                                <a href="/login">Conversations in Tibetan</a>
+                                             </h3>
+                                             <div class="course__summary">
+                                                <p>Learn how to combine the words learned in lesson 2 to make conversation! This course dives into the structure of Tibetan sentences- words that help you make a complete sentence, and the differences in pronouns</p>
+                                               </div>
+                                          </div>
+                                          <div class="course__more course__more-2 d-flex justify-content-between align-items-center">
+                                             <div class="course__status d-flex align-items-center">
+                                                <span class="blue-2">Free</span>
+                                                <span class="old-price">$46.00</span>
+                                             </div>
+                                             <div class="course__btn">
+                                                <a href="/courseDetails" class="link-btn">
+                                                   Unlock after Lesson 2
+                                                   <i class="far fa-arrow-right"></i>
+                                                   <i class="far fa-arrow-right"></i>
+                                                </a>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>                                                           
+                                                                                     
+                        </div>
+                     </div>
+                   </div>
+               </div>
+            </div>
+         </div>
+         
       </div>
-      <div class="col-6">
-        <h1> <%= user.points%></h1>
-        <ul class="row list-unstyled">
-        <% for(var i=0; i<posts.length; i++) {%>
-          <li class="col-6 justify-content-between mt-5">
-            <a href="/post/<%= posts[i]._id%>">
-              <img class="img-fluid" src="<%= posts[i].image%>">
-            </a>
-          </li>
-        <% } %>
-        </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
-        </div>  
-      </div>  
-    </div>
-  </div>
-</div>
+   </section>
+
+
 <%- include('partials/footer') -%>

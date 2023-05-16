@@ -1,103 +1,26 @@
 <%- include('partials/headerQuiz') -%>
-<body>
+<section class="page__title-area pt-120 pb-90" style="background-image: url('assets/img/course/quizbg.png');">
+
+    <div id="quizContainer">
+    
+
+
+    
     <h1>
         Alphabet Test
     </h1>
+    <form action="#">
+    <p><%= testQuestions[0].question%></p>
+    <img src= "<%= testQuestions[0].img %>">    
     
-    <section id="question1">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q1" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q1" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q1" id="ra" value=20>
-        <label for="ra">Ra</label>
-    
-    </section>
-    <section id="question2">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q2" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q2" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q2" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question3">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q3" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q3" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q3" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question4">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q4" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q4" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q4" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question5">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q5" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q5" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q5" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question6">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q6" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q6" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q6" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question7">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q7" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q7" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q7" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question8">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q8" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q8" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q8" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question9">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q9" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q9" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q9" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <section id="question10">
-        <p>What comes after Ka?</p>
-        <input type="radio" name="q10" id="kha" value=1>
-        <label for="kha">Kha</label>
-        <input type="radio" name="q10" id="ga" value=20>
-        <label for="ga">Ga</label>
-        <input type="radio" name="q10" id="ra" value=20>
-        <label for="ra">Ra</label>
-    </section>
-    <a href="/practiceOne" class="e-btn" id="submit">Submit</a>
+    </form>
+
+    <button onclick="addQuizPoints()" name="submit" class="e-btn" id="addQuizPoints">Submit</button>
     <h1 id="passOrFail"></h1>
+    <script type="text/javascript" src="assets/js/quizOne.js"></script>
+
     <script type="text/javascript" src="js/main.js"></script>
-</body>
+</div>
+</section>
 <%- include('partials/footer') -%>
   
