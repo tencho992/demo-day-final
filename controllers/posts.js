@@ -13,7 +13,7 @@ module.exports = {
       console.log(err);
     }
   },
-  getAccountInfo: async (req, res) => {
+  getSettings: async (req, res) => {
     try {
       const posts = await Post.find({ user: req.user.id });
       res.render("accountInfo.ejs", { posts: posts, user: req.user });

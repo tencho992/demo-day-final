@@ -14,7 +14,7 @@ router.post("/login", authController.postLogin);
 router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
-router.get("/accountInfo", ensureAuth, postsController.getAccountInfo);
+router.get("/settings", ensureAuth, postsController.getSettings);
 router.get("/journalEntries", ensureAuth, postsController.getJournalEntries);
 
 
