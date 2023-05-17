@@ -3,8 +3,18 @@
 </section>
 <div class="row">
 <div class="container">
-    <p><strong>User Name</strong>: <%= user.userName %></p>
-    <p><strong>Email</strong>: <%= user.email %></p>
+
+    <p><strong>User Name</strong>: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></p>
+    <input type="text" id="userInput" hidden place="update username">
+    <button type="submit" name="action" value="userName" class="e-btn" hidden id="updateBtn1">Update</button>
+    <p><strong>Email</strong>: <%= user.email %><i class="fal fa-pencil editEmail"></i></p>
+    <input hidden type="text" id='emailInput' place="update email">
+    <button type="submit" name="action" value="email" class="e-btn" hidden id="updateBtn2">Update</button>
+     <form action="/post/deleteUser/<%= user._id.toString() %>/?_method=DELETE" method="POST">
+        <button type="submit"><i class="fal fa-trash"></i></button>
+     </form>
+
+
 </div>
 </div>
 <a href="/logout" class="col-3 btn btn-primary">Logout</a>

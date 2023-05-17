@@ -117,3 +117,20 @@ exports.postSignup = (req, res, next) => {
     }
   );
 };
+exports.deleteUser = async (req, res) => {
+  try {
+    //delete user
+    await User.remove({ _id: req.params.id });
+    console.log("Deleted Post");
+    res.redirect("/");
+  } catch (err) {
+    res.redirect("/");
+  }
+};
+exports.updateUser = async (req, res) => {
+  try{
+    await User.save({_id: req.params.id})
+  }catch (err) {
+    res.redirect("/");
+  }
+};

@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const upload = require("../middleware/multer");
 const postsController = require("../controllers/posts");
+const {deleteUser} = require('../controllers/auth')
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Post Routes - simplified for now
@@ -19,5 +20,8 @@ router.get("/points/add", postsController.addPoints);
 
 router.get("/points/addQuiz", postsController.addQuizPoints);
 
+router.delete("/deleteUser/:id?", deleteUser);
+
+// router.put("/updateUser/:id?", ensureAuth, postsController.updateUser);
 
 module.exports = router;
