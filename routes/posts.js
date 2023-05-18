@@ -8,9 +8,9 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 //Post Routes - simplified for now
 router.get("/:id", ensureAuth, postsController.getPost);
 
-router.post("/createPost", upload.single("file"), postsController.createPost);
+router.post("/createPost", postsController.createPost);
 
-router.post("/createComments/:id", postsController.createComments);
+router.post("/createComments", postsController.createComments);
 
 router.put("/likePost/:id", postsController.likePost);
 
@@ -21,7 +21,5 @@ router.get("/points/add", postsController.addPoints);
 router.get("/points/addQuiz", postsController.addQuizPoints);
 
 router.delete("/deleteUser/:id?", deleteUser);
-
-// router.put("/updateUser/:id?", ensureAuth, postsController.updateUser);
 
 module.exports = router;

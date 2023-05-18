@@ -21,15 +21,7 @@ module.exports = {
       console.log(err);
     }
   },
-  getJournalEntries: async (req, res) => {
-    try {
-      const posts = await Post.find().sort({createdAt:'desc'});
-      console.log(posts)
-      res.render("journalEntries.ejs", { posts: posts, user: req.user });
-    } catch (err) {
-      console.log(err);
-    }
-  },
+  
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
@@ -59,7 +51,7 @@ module.exports = {
       });
       console.log(post)
       console.log("Post has been added!");
-      res.redirect("/journalEntries");
+      res.redirect("/courseDetails");
     } catch (err) {
       console.log(err);
     }
@@ -69,7 +61,7 @@ module.exports = {
       await Post.findOneAndUpdate(
         { _id: req.params.id },
         {
-          $inc: { likes: 1 },
+          $inc: { likes: +1 },
         }
       );
       console.log("Likes +1");
@@ -95,14 +87,13 @@ module.exports = {
 
 createComments: async (req, res) => {
   try {
-  
+    console.log(req.body)
     await Comments.create({
-      postid: ObjectId(req.params.id),
+      name: req.body.name,
       comment: req.body.comment,
-      user: req.user.id,
     });
     console.log("Comment has been added!");
-    res.redirect(`/post/${req.params.id}`);
+    res.redirect(`/courseDetails`);
   } catch (err) {
     console.log(err);
   }

@@ -28,7 +28,7 @@
     <div class="col-3 mt-5">
       <p><%= post.caption %></p>
     </div>
-    <form action="/post/createComments/<%= post._id %>" method="POST">
+    <form action="post/createComments" method="POST">
     <input type="text" placeholder="Comment Here" name="comment" id="comment">
     <button type="submit" name="submit" id="submit">Submit</button>
   

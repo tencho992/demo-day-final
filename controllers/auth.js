@@ -129,8 +129,31 @@ exports.deleteUser = async (req, res) => {
 };
 exports.updateUser = async (req, res) => {
   try{
-    await User.save({_id: req.params.id})
+    let newUserName = req.body.newUserName
+    console.log(newUserName)
+    await User.findOneAndUpdate(
+      { _id: req.params.id },
+      {
+        $set: { userName: newUserName },
+      }
+    );
+    res.redirect('/settings')
   }catch (err) {
-    res.redirect("/");
+    res.redirect("/settings");
+  }
+};
+exports.updateEmail = async (req, res) => {
+  try{
+    let newEmail = req.body.newEmail
+    console.log(newEmail)
+    await User.findOneAndUpdate(
+      { _id: req.params.id },
+      {
+        $set: { email: newEmail },
+      }
+    );
+    res.redirect('/settings')
+  }catch (err) {
+    res.redirect("/settings");
   }
 };

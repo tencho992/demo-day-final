@@ -198,31 +198,28 @@
                                </div>
                                <div class="course__form">
                                   <h3>Add Comment</h3>
+                                  
                                   <div class="course__form-inner">
-                                     <form action="#">
+                                     <form action="/post/createComments" method="POST">
                                         <div class="row">
                                            <div class="col-xxl-6">
                                               <div class="course__form-input">
-                                                 <input type="text" placeholder="Your Name">
+                                                 <input type="text" id="commentName" placeholder="Your Name" name="name">
                                               </div>
                                            </div>
-                                           <div class="col-xxl-6">
-                                              <div class="course__form-input">
-                                                 <input type="email" placeholder="Your Email">
-                                              </div>
-                                           </div>
+                                           
                                            
                                            <div class="col-xxl-12">
                                               <div class="course__form-input">
                                                  
-                                                 <textarea placeholder="Comment"></textarea>
+                                                 <textarea id="comment" placeholder="Comment" name="comment"></textarea>
                                               </div>
                                            </div>
                                         </div>
                                         <div class="row">
                                            <div class="col-xxl-12">
                                               <div class="course__form-btn mt-10 mb-55">
-                                                 <button type="submit" class="e-btn">Submit Comment</button>
+                                                 <input type="submit" id='commentForm' class="e-btn">
                                               </div>
                                            </div>
                                         </div>
@@ -457,4 +454,5 @@
 
 
  </main>
+ <script type="text/javascript" src="comment.js"></script>
 <%- include('partials/footer') -%>

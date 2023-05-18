@@ -15,7 +15,8 @@ router.get("/logout", authController.logout);
 router.get("/signup", authController.getSignup);
 router.post("/signup", authController.postSignup);
 router.get("/settings", ensureAuth, postsController.getSettings);
-router.get("/journalEntries", ensureAuth, postsController.getJournalEntries);
+router.put("/updateUser/:id", ensureAuth, authController.updateUser);
+router.put("/updateEmail/:id", ensureAuth, authController.updateEmail);
 
 
 //main routes --body////////////
