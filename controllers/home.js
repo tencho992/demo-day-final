@@ -1,3 +1,5 @@
+const Comments = require("../models/Comments");
+
 module.exports = {
   getIndex: (req, res) => {
     res.render("index.ejs");
@@ -19,8 +21,14 @@ module.exports = {
     res.render("courseList.ejs");
     
   },
-  getCourseDetails: (req, res) => {
-    res.render("courseDetails.ejs");
+  getCourseDetails: async (req, res) => {
+      try {
+        const comment = await Comments.find();
+        res.render("courseDetails.ejs", { comment: comment });
+      } catch (err) {
+        console.log(err);
+      }
+    
     
   },
   getPracticeOne: (req, res) => {

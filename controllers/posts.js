@@ -21,7 +21,7 @@ module.exports = {
       console.log(err);
     }
   },
-  
+  /////////////////////////////boilerplate//////////////////////////////////
   getFeed: async (req, res) => {
     try {
       const posts = await Post.find().sort({ createdAt: "desc" }).lean();
@@ -84,16 +84,18 @@ module.exports = {
       res.redirect("/profile");
     }
   },
+/////////////////////////////////////////boilerplate end/////////////////////////
 
 createComments: async (req, res) => {
   try {
+
     console.log(req.body)
     await Comments.create({
       name: req.body.name,
       comment: req.body.comment,
     });
     console.log("Comment has been added!");
-    res.redirect(`/courseDetails`);
+    res.render(`/courseDetails`);
   } catch (err) {
     console.log(err);
   }
