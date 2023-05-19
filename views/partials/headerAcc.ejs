@@ -3,7 +3,7 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
-      <title>Quiz • TibNation</title>
+      <title>TibNation </title>
       <meta name="description" content="">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Place favicon.ico in the root directory -->
@@ -21,7 +21,9 @@
       <link rel="stylesheet" href="assets/css/elegantFont.css">
       <link rel="stylesheet" href="assets/css/default.css">
       <link rel="stylesheet" href="assets/css/style.css">
-      <link rel="stylesheet" href="assets/css/quiz.css">
+      <link rel="stylesheet" href="assets/account.css">
+
+      
 
    </head>
    <body>
@@ -56,14 +58,14 @@
 
       <!-- header area start -->
       <header>
-         <div id="" class="header__area header__transparent header__padding">
+         <div id="header-sticky" class="header__area header__transparent header__padding header__white">
             <div class="container-fluid">
                <div class="row align-items-center">
                   <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-2 col-sm-4 col-6">
                      <div class="header__left d-flex">
                         <div class="logo">
                            <a href="/">
-                              <img src="assets/img/logo/logo.png" alt="logo">
+                              <img class="logo-white" src="assets/img/logo/footerlogo.png" alt="logo">
                            </a>
                         </div>
                         
@@ -71,22 +73,37 @@
                   </div>
                   <div class="col-xxl-9 col-xl-9 col-lg-8 col-md-10 col-sm-8 col-6">
                      <div class="header__right d-flex justify-content-end align-items-center">
-                        <div class="main-menu">
+                        <div class="main-menu main-menu-3">
                            <nav id="mobile-menu">
                               <ul>
                                  <li>
                                     <a href="/profile">Home</a>
                                  </li>
-                                
-                                 <li><a href="/courseDetails">Go Back</a></li>
+                                 <li>
+                                    <a href="/login">Courses</a>
+                                 </li>
+                                 <li>
+                                    <a href="/news">News</a>
+                                 </li>
+                                 <li>
+                                    <a href="/about">About</a>
+                                 </li>
+                                 <li>
+                                    <a href="/contact">Contact</a>
+                                 </li>
                               </ul>
                            </nav>
                         </div>
-                        
                         <div class="header__btn ml-20 d-none d-sm-block">
-                           <a href="/quizOne" class="e-btn">Reset Quiz!</a>
+                           <a href="/logout" class="e-btn">Log out</a>
                         </div>
-                        
+                        <div class="sidebar__menu d-xl-none">
+                           <div class="sidebar-toggle-btn ml-30" id="sidebar-toggle">
+                               <span class="line"></span>
+                               <span class="line"></span>
+                               <span class="line"></span>
+                           </div>
+                       </div>
                      </div>
                   </div>
                </div>
@@ -95,4 +112,32 @@
       </header>
       <!-- header area end -->
 
+      <!-- cart mini area start -->
+      
+      <!-- cart mini area end -->
 
+
+      <!-- sidebar area start -->
+      <div class="sidebar__area">
+         <div class="sidebar__wrapper">
+            <div class="sidebar__close">
+               <button class="sidebar__close-btn" id="sidebar__close-btn">
+               <span><i class="fal fa-times"></i></span>
+               <span>close</span>
+               </button>
+            </div>
+            <div class="sidebar__content">
+               <div class="logo mb-40">
+                  <a href="/">
+                  <img src="assets/img/logo/logo.png" alt="logo">
+                  </a>
+               </div>
+               <div class="mobile-menu fix"></div>
+
+              
+            </div>
+         </div>
+      </div>
+      <!-- sidebar area end -->      
+      <div class="body-overlay"></div>
+      <!-- sidebar area end -->

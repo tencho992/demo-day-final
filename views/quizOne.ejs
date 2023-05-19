@@ -1,6 +1,6 @@
 <%- include('partials/headerQuiz') -%>
 
-<section class="page__title-area pt-120 pb-90" style="background-image: url('assets/img/course/quiz/quizbg.png');">
+<section class="page__title-area pt-120 pb-90" style="background-image: url('assets/img/course/quiz/quizbg.png')" >
 
     <div id="container">
         <div id="start">Start Quiz!</div>
@@ -21,5 +21,6 @@
         </div>
         <div id="scoreContainer" style="display: none"></div>
     </div>
+    <button class="e-btn" disabled id="quizButton" onclick="addQuizPoints()">Proceed to Lvl 2!</button>
     <script type="text/javascript" src="assets/js/quizOne.js"></script>
     <%- include('partials/footer') -%>

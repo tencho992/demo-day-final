@@ -143,6 +143,8 @@ function answerIsCorrect(){
 function answerIsWrong(){
     document.getElementById(runningQuestion).style.backgroundColor = "#f00";
 }
+// score button +100
+    const passButton = document.querySelector('#quizButton')
 
 // score render
 function scoreRender(){
@@ -150,14 +152,13 @@ function scoreRender(){
     
     // calculate the amount of question percent answered by the user
     const scorePerCent = Math.round(100 * score/questions.length);
-    
+    let winner = (scorePerCent >=70 ? passButton.disabled = false : passButton.disabled = true)
+
     // choose the image based on the scorePerCent
-    let img = (scorePerCent >= 70) ? "assets/img/course/quiz/wow-reacc.gif" : "assets/img/course/quiz/sad-reacc.gif";
-    
+    let img = (scorePerCent >= 70) ? "assets/img/course/quiz/pass.png" : "assets/img/course/quiz/fail.png";
     scoreDiv.innerHTML = "<img src="+ img +">";
     scoreDiv.innerHTML += "<p>"+ scorePerCent +"%</p>";
 }
-
 
 
 

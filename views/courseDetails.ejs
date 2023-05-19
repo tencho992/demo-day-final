@@ -174,26 +174,29 @@
                             <div class="course__review">
                                <div class="course__comment mb-75">
                                   <h3>Displaying <%= comment.length %> Comments</h3>
-
                                   <ul>
-
-                                     <li>
-                                        <div class="course__comment-box ">
-                                           <div class="course__comment-content">
-                                              <div class="course__comment-wrapper ml-70 fix">
-                                                 <div class="course__comment-info float-start">
-                                                    <h4><%= comment[0].name%></h4>
-                                                    <span><%= comment[0].createdAt%></span>
-                                                 </div>
+                                    <% for (let i = 0; i < comment.length; i++) { %>
+                                      <li>
+                                        <div class="course__comment-box">
+                                          <div class="course__comment-thumb float-start">
+                                             <img src="assets/img/course/comment/course-comment-1.jpg" alt="">
+                                          </div>
+                                          <div class="course__comment-content">
+                                            <div class="course__comment-wrapper ml-70 fix">
+                                              <div class="course__comment-info float-start">
+                                                <h4><%= comment[i].name %></h4>
+                                                <span><%= comment[i].createdAt %></span>
                                               </div>
-                                              <div class="course__comment-text ml-70">
-                                                 <p><%= comment[0].comment%></p>
-                                              </div>
-                                           </div>
+                                            </div>
+                                            <div class="course__comment-text ml-70">
+                                              <p><%= comment[i].comment %></p>
+                                            </div>
+                                          </div>
                                         </div>
-                                     </li>
-                                     
+                                      </li>
+                                    <% } %>
                                   </ul>
+                                  
 
                                </div>
                                <div class="course__form">

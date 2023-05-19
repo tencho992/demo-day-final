@@ -1,0 +1,10 @@
+#account{
+  margin-top: 55px;
+  margin-bottom: 55px;
+  border: 5px black solid;
+  width: 50%;
+  height: 200px;
+  padding: 50px;
+  padding-bottom: 40px;
+  margin-left: 100px;
+}

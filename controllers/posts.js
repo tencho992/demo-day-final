@@ -95,7 +95,7 @@ createComments: async (req, res) => {
       comment: req.body.comment,
     });
     console.log("Comment has been added!");
-    res.render(`/courseDetails`);
+    res.redirect(`/courseDetails`);
   } catch (err) {
     console.log(err);
   }

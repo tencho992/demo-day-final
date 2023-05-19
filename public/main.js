@@ -6,7 +6,7 @@ function addPoints(){
 }
 function addQuizPoints(){
   fetch('/post/points/addQuiz')
-    window.location.href='/completeQuiz'
+    window.location.href='/profile'
   
 }
 let userInput = document.querySelector('#userInput')
@@ -22,9 +22,3 @@ function showInputs2(input){
   document.querySelector('#updateBtn2').hidden = false;
   emailInput.hidden = false
 }
-//when they click submit
-//have the updateUser function to call backend route
-//backend route = put request
-//put request will update the 
-//req.user.save()
-//set req.user to a variable- edit that copy varaible to username
