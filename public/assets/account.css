@@ -1,10 +1,18 @@
 #account{
   margin-top: 55px;
   margin-bottom: 55px;
-  border: 5px black solid;
-  width: 50%;
-  height: 200px;
+  border: 0px black solid;
+  width: 70%;
+  height: 440px;
   padding: 50px;
   padding-bottom: 40px;
-  margin-left: 100px;
+  margin-left: 50px;
+  border-radius: 15px;
+  background-image: linear-gradient(to left, white , rgb(81, 140, 195))
+}
+#userInfo{
+  height:180px;
+}
+#cssDelete{
+  margin-top: 100px;
 }

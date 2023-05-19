@@ -13,29 +13,31 @@
 </section>
 
 <div class="row"> 
-<div class="container" >
-<section id="account">
+   <section id="account">
 
-    <p><strong>User Name</strong>: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></p>
+<div class="container" id="userInfo" >
+
+    <h2>User Name: <%= user.userName %><i onclick="showInputs()" class="fal fa-pencil editUser"></i></h2>
     <form action="/updateUser/<%= user._id.toString()%>/?_method=PUT" method="post">
     <input type="text" id="userInput" hidden place="update username" name="newUserName">
     
     <button type="submit" class="e-btn" hidden id="updateBtn1">Update</button>
    </form>
-
+<br><br>
    <form action="/updateEmail/<%= user._id.toString()%>/?_method=PUT" method="post">
-    <p><strong>Email</strong>: <%= user.email %><i  onclick="showInputs2()" class="fal fa-pencil editEmail"></i></p>
+   <h2><strong>Email</strong>: <%= user.email %><i  onclick="showInputs2()" class="fal fa-pencil editEmail"></i></h2>
     <input hidden type="text" id='emailInput' place="update email" name="newEmail">
     <button type="submit" name="action" value="email" class="e-btn" hidden id="updateBtn2">Update</button>
    </form>
+   <br><br>
 
-
+</div>
      <form action="/post/deleteUser/<%= user._id.toString() %>/?_method=DELETE" method="POST">
-        <button type="submit"><i class="fal fa-trash"></i></button>
+       <h4 id="cssDelete"> <button type="submit" class="e-btn">Delete Account: We're Sorry to see you go!</button></h4>
      </form>
 
 </section>
-</div>
+
 </div>
 
 <%- include('partials/footer') -%>
