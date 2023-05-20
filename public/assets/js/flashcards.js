@@ -39,10 +39,6 @@ const flashcards = [
         answer: "assets/img/course/game/nya.png"
     },
     {
-        question: "assets/img/course/game/tkha.png",
-        answer: "assets/img/course/game/kha.png"
-    },
-    {
         question: "assets/img/course/game/tta.png",
         answer: "assets/img/course/game/taeng.png"
     },

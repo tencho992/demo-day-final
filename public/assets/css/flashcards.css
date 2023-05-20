@@ -1,7 +1,6 @@
 #flashbody {
     /* margin-top: 50px; */
     /* margin-bottom: 100px; */
-    font-family: Arial, sans-serif;
     text-align: center;
     /* background-color: red; */
 }
@@ -16,7 +15,7 @@
 .card {
     width: 300px;
     height: 200px;
-    background-color: #f1f1f1;
+    background-color: #e6e6e6;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -41,10 +40,14 @@
 
 .card-front {
     transform: rotateY(0deg);
+    background-color: #e6e6e6;
+
 }
 
 .card-back {
     transform: rotateY(180deg);
+    background-color: #e6e6e6;
+
 }
 
 h2 {
@@ -79,4 +82,7 @@ button:hover {
 #flip-btn, #next-btn{
     margin-left: 10px;
     margin-right: 10px;
+}
+#question, #answer{
+    width: 40%;
 }

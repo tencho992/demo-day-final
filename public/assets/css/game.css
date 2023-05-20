@@ -9,6 +9,7 @@
 
 #img {
   height: 200px;
+  border-radius: 15px;
 }
 
 .footer__link {
@@ -31,7 +32,6 @@
 #gameBody {
   height: 100vh;
   display: flex;
-  /* background: url('../images/marvelbackground.png'); */
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -55,15 +55,19 @@
   transform-style: preserve-3d;
   transition: transform .5s;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  border-radius: 15px;
+
 }
 
 .memory-card:active {
   transform: scale(0.97);
   transition: transform .2s;
+
 }
 
 .memory-card.flip {
   transform: rotateY(180deg);
+  
 }
 
 .front-face,
@@ -72,7 +76,7 @@
   height: 100%;
   padding: 20px;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 15px;
   background: #d9d9dc6b;
   backface-visibility: hidden;
 }
@@ -86,4 +90,7 @@
 }
 #addPoints{
   margin-left: 10px;
+}
+.front-face{
+  background-color: #e6e6e6;  
 }
