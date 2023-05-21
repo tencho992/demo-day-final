@@ -8627,11 +8627,39 @@ p.checkout-coupon input[type=text]:focus {
 
 }
 #special{
-  color: white;
+  color: black;
 }
 #quizContainer{
   margin-top: 200px;
   margin-bottom: 250px;
   margin-left: 400px;
+}
+
+
+#tibetanOutput{
+   margin-top: 30px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 6rem;
+}
+#userInput{
+  margin-top: 2px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#amaTranslation{
+  margin-left: 20px;
+  width: 100%;
+}
+#students{
+  width: 90%;
+  border-radius: 25px;
+  border: darkblue 2px solid;
 }
 /*# sourceMappingURL=style.css.map */

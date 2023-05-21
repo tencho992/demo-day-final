@@ -6,7 +6,7 @@ function addPoints(){
 }
 function addQuizPoints(){
   fetch('/post/points/addQuiz')
-    window.location.href='/profile'
+    window.location.href='/completeQuiz'
   
 }
 let userInput = document.querySelector('#userInput')

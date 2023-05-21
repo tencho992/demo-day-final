@@ -30,6 +30,7 @@ router.get("/practiceOne", homeController.getPracticeOne); //Prior wishlist.ejs
 router.get("/quizOne", homeController.getQuizOne);
 router.get("/completeGame", homeController.getCompleteGame); //Prior wishlist.ejs
 router.get("/completeQuiz", homeController.getCompleteQuiz); //Prior wishlist.ejs
+router.get("/translation", homeController.getTranslation);
 
 module.exports = router;
 

@@ -21,18 +21,18 @@ body{
     word-break: break-all;
     width:200px;
     height:150px;
-    border : 2px solid lightgrey;
+    border : 2px solid rgb(12, 11, 11);
     text-align: center;
     cursor: pointer;
     position: absolute;
     left:250px;
     top:50px;
-    color : lightgrey;
+    color : rgb(12, 9, 9);
     padding-top: 50px;
 }
 #start:hover{
-    border: 3px solid lightseagreen;
-    color : lightseagreen;
+    border: 3px solid rgb(238, 246, 245);
+    color : rgb(30, 65, 64);
 }
 
 #qImg{
@@ -55,11 +55,13 @@ body{
     position: absolute;
     right:0;
     top:0;
+    color: #000;
 }
 #question p{
     margin : 0;
     padding : 15px;
     font-size: 1.25em;
+    color: black;
 }
 
 #choices{
@@ -73,13 +75,13 @@ body{
     display: inline-block;
     width : 135px;
     text-align: center;
-    border : 1px solid grey;
+    border : 1px solid rgb(9, 8, 8);
     border-radius: 15px;
     cursor: pointer;
     padding : 5px;
 }
 .choice:hover{
-    border : 2px solid grey;
+    border : 2px solid rgb(10, 8, 8);
     font-weight: bold;
 }
 
