@@ -50,5 +50,13 @@ module.exports = {
   getTranslation: (req, res) => {
     res.render("translation.ejs");
     
+  },
+  getFlashcards: (req, res) => {
+    res.render("flashcards.ejs");
+    
+  },
+  getDraw: (req, res) => {
+    res.render("drawConsonant.ejs");
+    
   }
 };

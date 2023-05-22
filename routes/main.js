@@ -31,6 +31,8 @@ router.get("/quizOne", homeController.getQuizOne);
 router.get("/completeGame", homeController.getCompleteGame); //Prior wishlist.ejs
 router.get("/completeQuiz", homeController.getCompleteQuiz); //Prior wishlist.ejs
 router.get("/translation", homeController.getTranslation);
+router.get("/flashcards", homeController.getFlashcards);
+router.get("/draw", homeController.getDraw);
 
 module.exports = router;
 
