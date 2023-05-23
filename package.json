@@ -4,8 +4,8 @@
   "description": "Tibetan Learning and Cultural Preservation",
   "main": "src/server.js",
   "scripts": {
-    "yarn start": "nodemon src/server.js",
-    "yarn test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": ">=14.20.1"
