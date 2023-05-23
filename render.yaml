@@ -1,0 +1,4 @@
+services:
+  - name: tibnation
+    buildCommand: echo "No build step required"
+    startCommand: node demo-day-final/src/server.js
