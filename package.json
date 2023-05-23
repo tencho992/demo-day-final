@@ -1,6 +1,5 @@
 {
   "name": "demo-day-demo",
-  "version": "1.0.0",
   "description": "Tibetan Learning and Cultural Preservation",
   "main": "src/server.js",
   "scripts": {
