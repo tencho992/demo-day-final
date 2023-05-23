@@ -1,5 +1,5 @@
 {
-  "name": "demo-day-demo",
+  "name": "demo-day-v3",
   "description": "Tibetan Learning and Cultural Preservation",
   "main": "src/server.js",
   "scripts": {
